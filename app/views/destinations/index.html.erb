@@ -2,43 +2,32 @@
   <div class="price-main">
     <div class="left-section">
       <div class="left-content">
+        <div class="left-content-header">
+          <%= image_tag "weekendr-logo-black.png", width: 150 %>
+          <p><span style="color:white"><em>Les weekends inoubliables</em></span></p>
+        </div>
       </div>
-      <svg class="left-section-border" viewBox="0 0 17 733" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="left-section-border" viewBox="0 0 17 733" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M3.5 0H0.5V733H3.5C3.5 733 16.5 509.702 16.5 366.5C16.5 223.298 3.5 0 3.5 0Z" fill="#009BED" />
-      </svg>
+        </svg>
     </div>
     <div class="price-cards">
       <div class="price-header">
         <h1>PRIX DES TRANSPORTS PAR VILLE</h1>
       </div>
       <div class="results">
-        <div class="price-card">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-            <div class="price-card-infos">
-              <div>
-                <h2>Athènes</h2>
+        <% @destinations.each do |destination| %>
+          <div class="price-card" data-aos="fade-up">
+            <img src="<%= destination.photo_link %>">
+              <div class="price-card-infos">
+                <div>
+                  <h2><%= destination.destination_name %></h2>
+                </div>
+                <h2 class="price-card-pricing" id="price"><i class="fa fa-ticket-alt"></i><%= destination.transport_price %></h2>
               </div>
-              <h2 class="price-card-pricing">£99.99</h2>
-            </div>
-        </div>
-        <div class="price-card">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-            <div class="price-card-infos">
-              <div>
-                <h2>Athènes</h2>
-              </div>
-              <h2 class="price-card-pricing">£99.99</h2>
-            </div>
-        </div>
-        <div class="price-card">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-            <div class="price-card-infos">
-              <div>
-                <h2>Athènes</h2>
-              </div>
-              <h2 class="price-card-pricing">£99.99</h2>
-            </div>
-        </div>
+          </div>
+        <% end %>
       </div>
     </div>
+  </div>
 </div>

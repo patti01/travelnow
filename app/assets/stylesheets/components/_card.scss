@@ -8,9 +8,9 @@
   background: white;
 }
 
-
 .price-card > img {
   width: 100%;
+  max-height: 250px;
   object-fit: cover;
 }
 
@@ -35,6 +35,10 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+}
+
+#price {
+  color: #A5A5A5;
 }
 
 
