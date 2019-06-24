@@ -1,0 +1,103 @@
+
+.main-box {
+  background: white;
+  min-height: 100vh;
+}
+
+.price-main {
+  z-index: 20;
+  display: flex;
+  position: relative;
+}
+
+.left-section {
+  max-width: 350px;
+  box-shadow: 4px 0 20px rgba(51,51,51,.25);
+  display: flex;
+  width: 30%;
+  position: -webkit-sticky;
+  position: sticky;
+  align-self: flex-start;
+  top: 0;
+  margin-right: 10px;
+}
+
+.left-content {
+  overflow: scroll;
+  width: 100%;
+  background: $blue;
+  height: 100vh;
+}
+
+.left-section-border {
+  position: absolute;
+  right: -2.1vh;
+  z-index: -1;
+  height: 100vh;
+}
+
+.price-cards {
+  width: 70%;
+  margin: 30px 60px;
+}
+
+.price-header {
+  background: $yellow;
+  position: relative;
+  padding: 15px 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .results {
+    grid-template-columns: 1fr;
+  }
+  .left-section {
+    display: none;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .results {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .results {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .results {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .results {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
+
